@@ -1,0 +1,31 @@
+{
+  "name": "2025-2b-t18-in04-g03",
+  "version": "1.0.0",
+  "description": "<p align=\"center\">\r <a href= \"https://www.inteli.edu.br/\"><img src=\"assets/inteli.png\" alt=\"Inteli - Instituto de Tecnologia e Liderança\" border=\"0\" width=40% height=40%></a>\r </p>",
+  "main": "brokerSubscribe.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node db.js brokerSubscribe.js",
+    "api": "node app.js",
+    "dashboard": "cd src/dashboard && npm run dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Inteli-College/2025-2B-T18-IN04-G03.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Inteli-College/2025-2B-T18-IN04-G03/issues"
+  },
+  "homepage": "https://github.com/Inteli-College/2025-2B-T18-IN04-G03#readme",
+  "dependencies": {
+    "axios": "^1.13.2",
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0",
+    "mqtt": "^5.14.1",
+    "pg": "^8.16.3",
+    "sqlite3": "^5.1.7"
+  }
+}

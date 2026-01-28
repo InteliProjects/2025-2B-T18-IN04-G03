@@ -1,0 +1,38 @@
+
+services:
+  microsservico:
+    build:
+      context: .
+    environment:
+      NODE_ENV: production
+      BROKER_URL: mqtt://broker_mqtt:1883
+      BANCO_NUVEM_API_URL: http://banco_nuvem:3001
+    depends_on:
+      - broker_mqtt
+      - banco_nuvem
+
+  banco_nuvem:
+    build:
+      context: .
+      dockerfile: ./src/microsservico/banco_Nuvem/Dockerfile
+    container_name: banco_nuvem_api
+    ports:
+      - "3001:3001"
+    environment:
+      NODE_ENV: production
+      DB_HOST: aws-1-sa-east-1.pooler.supabase.com
+      DB_PORT: 5432
+      DB_USER: postgres.wdopoyvobeoyclxwfndr
+      DB_PASSWORD: desTREMidos
+      DB_DATABASE: postgres
+      DB_SSL: true
+    depends_on:
+      - broker_mqtt
+
+  broker_mqtt:
+    image: eclipse-mosquitto:latest
+    container_name: broker_mqtt
+    ports:
+      - "1883:1883"
+    volumes:
+      - ./src/mosquitto/config/mosquitto.conf:/mosquitto/config/mosquitto.conf   

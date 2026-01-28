@@ -1,10 +1,15 @@
 # Documentação IoTDoc - Módulo 4 - Inteli
 
-**_Os trechos em itálico servem apenas como guia para o preenchimento da seção. Por esse motivo, não devem fazer parte da documentação final_**
-
-## Nome do Grupo
+## DesTremidos - Lock-in
 
 #### Nomes dos integrantes do grupo
+
+Christian de Carvalho Lawrence
+Vinícius Rangel Marques
+Yan de Oliveira Ribeiro
+Wendel Hebert Feitosa
+Nicholas Millani
+Matheus Henrique Scapolan Silva
 
 <div align="center">
   <sub>Figura 1: Logo do Inteli.</sub><br>
